@@ -2,6 +2,8 @@ const fs = require("fs");
 const express = require("express");
 const app = express();
 
+const PORT = process.env.PORT || 3001;
+
 let allFiles = [];
 app.use("/get",(req, res)=>{ 
 
@@ -38,6 +40,6 @@ app.use("/post",(req, res)=>{
 
 
 
-app.listen(3001, ()=>{
+app.listen(PORT, ()=>{
     console.log("app listening at http://localhost:3001");
 })
